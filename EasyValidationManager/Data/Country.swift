@@ -1,12 +1,12 @@
 public struct Country: Decodable {
-    var alpha2: String?
-    var alpha3: String?
-    var countryCode: String?
-    var countryName: String?
-    var mobileBeginWith: [String]?
-    var phoneNumberLengths: [Int]?
+    public var alpha2: String?
+    public var alpha3: String?
+    public var countryCode: String?
+    public var countryName: String?
+    public var mobileBeginWith: [String]?
+    public var phoneNumberLengths: [Int]?
     
-    init(json: [String: Any]) {
+    public init(json: [String: Any]) {
         alpha2 = json["alpha2"] as? String
         alpha3 = json["alpha3"] as? String
         countryCode = json["country_code"] as? String
