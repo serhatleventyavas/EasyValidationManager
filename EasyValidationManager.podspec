@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "EasyValidationManager"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "EasyValidationManager is a small validation library."
   spec.description  = <<-DESC
   EasyValidationManager library allow to us that check phone number, credit card, email easily."
@@ -11,5 +11,6 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "12.1"
   spec.swift_versions = "4.2"
   spec.source       = { :git => "https://github.com/serhatleventyavas/EasyValidationManager.git", :tag => "#{spec.version}" }
-  spec.source_files  = "EasyValidationManager/**/*.{h,m,swift}"
+  spec.source_files = "EasyValidationManager/**/*.{h,m,swift}"
+  spec.resources    = "EasyValidationManager/**/*.{json}"
 end
