@@ -1,11 +1,3 @@
-//
-//  EasyValidationManagerTests.swift
-//  EasyValidationManagerTests
-//
-//  Created by mac on 29.02.2020.
-//  Copyright © 2020 Serhat Levent Yavaş. All rights reserved.
-//
-
 import XCTest
 @testable import EasyValidationManager
 
