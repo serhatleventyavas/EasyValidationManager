@@ -11,24 +11,55 @@ import XCTest
 
 class EasyValidationManagerTests: XCTestCase {
 
+    var sut: JsonParser!
+    var country: Country!
+
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        sut = JsonParser()
+        var dicExampleCountry: [String: Any] = [:]
+        dicExampleCountry["alpha2"] = "TR"
+        dicExampleCountry["alpha3"] = "TUR"
+        dicExampleCountry["country_code"] = "90"
+        dicExampleCountry["country_name"] = "Turkey"
+        dicExampleCountry["mobile_begin_with"] = ["5"]
+        dicExampleCountry["phone_number_lengths"] = [10]
+        country = Country(json: dicExampleCountry)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+        country = nil
+        super.tearDown()
+    }
+    
+    func test_parseCountryListFromJSONData() {
+        let countries = sut.getCountryList()
+        XCTAssertEqual(countries.count, 228)
+    }
+    
+    func test_checkFirstCountryIsUS() {
+        let countries = sut.getCountryList()
+        XCTAssertEqual(countries[0].alpha2, "US")
+    }
+    
+    func test_checkLastCountryZW() {
+        let countries = sut.getCountryList()
+        XCTAssertEqual(countries[countries.count - 1].alpha2, "ZW")
+    }
+    
+    func test_invalidTurkeyPhoneNumberWithWrongMobileBegin() {
+        let result: Bool = PhoneValidation.validPhoneNumber(country: country, phoneNumber: "4551231233")
+        XCTAssertEqual(result, false)
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_invalidTurkeyPhoneNumberWithWrongPhoneNumberLength() {
+        let result: Bool = PhoneValidation.validPhoneNumber(country: country, phoneNumber: "555121233")
+        XCTAssertEqual(result, false)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_validTurkeyPhoneNumber() {
+        let result: Bool = PhoneValidation.validPhoneNumber(country: country, phoneNumber: "5551231233")
+        XCTAssertEqual(result, true)
     }
-
 }

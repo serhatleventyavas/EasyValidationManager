@@ -16,6 +16,10 @@
 		0499109A240AADC90082E521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04991098240AADC90082E521 /* Main.storyboard */; };
 		0499109C240AADCA0082E521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0499109B240AADCA0082E521 /* Assets.xcassets */; };
 		0499109F240AADCA0082E521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0499109D240AADCA0082E521 /* LaunchScreen.storyboard */; };
+		049910A6240AAEE50082E521 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910A5240AAEE50082E521 /* Country.swift */; };
+		049910A9240AAEFD0082E521 /* PhoneValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910A8240AAEFD0082E521 /* PhoneValidation.swift */; };
+		049910AB240AAF170082E521 /* country.json in Resources */ = {isa = PBXBuildFile; fileRef = 049910AA240AAF170082E521 /* country.json */; };
+		049910AE240AAF2B0082E521 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049910AD240AAF2B0082E521 /* JsonParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		0499109B240AADCA0082E521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0499109E240AADCA0082E521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049910A0240AADCA0082E521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049910A5240AAEE50082E521 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		049910A8240AAEFD0082E521 /* PhoneValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidation.swift; sourceTree = "<group>"; };
+		049910AA240AAF170082E521 /* country.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country.json; sourceTree = "<group>"; };
+		049910AD240AAF2B0082E521 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,10 @@
 		04991074240AADA70082E521 /* EasyValidationManager */ = {
 			isa = PBXGroup;
 			children = (
+				049910AC240AAF250082E521 /* Parsers */,
+				049910AA240AAF170082E521 /* country.json */,
+				049910A7240AAEF60082E521 /* Validations */,
+				049910A4240AAEDB0082E521 /* Data */,
 				04991075240AADA70082E521 /* EasyValidationManager.h */,
 				04991076240AADA70082E521 /* Info.plist */,
 			);
@@ -121,6 +133,30 @@
 				049910A0240AADCA0082E521 /* Info.plist */,
 			);
 			path = EasyValidationManagerExamples;
+			sourceTree = "<group>";
+		};
+		049910A4240AAEDB0082E521 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				049910A5240AAEE50082E521 /* Country.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		049910A7240AAEF60082E521 /* Validations */ = {
+			isa = PBXGroup;
+			children = (
+				049910A8240AAEFD0082E521 /* PhoneValidation.swift */,
+			);
+			path = Validations;
+			sourceTree = "<group>";
+		};
+		049910AC240AAF250082E521 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				049910AD240AAF2B0082E521 /* JsonParser.swift */,
+			);
+			path = Parsers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +238,7 @@
 				TargetAttributes = {
 					04991071240AADA70082E521 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					0499107A240AADA70082E521 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -236,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049910AB240AAF170082E521 /* country.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049910A6240AAEE50082E521 /* Country.swift in Sources */,
+				049910A9240AAEFD0082E521 /* PhoneValidation.swift in Sources */,
+				049910AE240AAF2B0082E521 /* JsonParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +478,7 @@
 		04991087240AADA70082E521 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 78H3V6D63Q;
@@ -453,6 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.serhatleventyavas.EasyValidationManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,6 +504,7 @@
 		04991088240AADA70082E521 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 78H3V6D63Q;
@@ -485,6 +529,7 @@
 		0499108A240AADA70082E521 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78H3V6D63Q;
 				INFOPLIST_FILE = EasyValidationManagerTests/Info.plist;
@@ -503,6 +548,7 @@
 		0499108B240AADA70082E521 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78H3V6D63Q;
 				INFOPLIST_FILE = EasyValidationManagerTests/Info.plist;
