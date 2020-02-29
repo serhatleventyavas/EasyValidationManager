@@ -1,6 +1,6 @@
 import Foundation
 
-class PhoneValidation {
+public class PhoneValidation {
     
     private init() {}
     

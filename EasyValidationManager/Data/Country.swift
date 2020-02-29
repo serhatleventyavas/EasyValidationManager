@@ -1,4 +1,4 @@
-struct Country: Decodable {
+public struct Country: Decodable {
     var alpha2: String?
     var alpha3: String?
     var countryCode: String?

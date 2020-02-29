@@ -1,6 +1,6 @@
 import Foundation
 
-class JsonParser {
+public class JsonParser {
     
     func getCountryList() -> [Country] {
         let path = Bundle(for: type(of: self)).path(forResource: "country", ofType: "json")

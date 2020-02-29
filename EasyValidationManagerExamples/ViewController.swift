@@ -1,5 +1,4 @@
 import UIKit
-import EasyValidationManager
 
 class ViewController: UIViewController {
 
