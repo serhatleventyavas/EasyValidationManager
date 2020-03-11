@@ -9,7 +9,7 @@ EasyValidationManager library allow to us that check phone number, credit card, 
 ### Features
 - [x] Check phone number
 - [ ] Check email address
-- [ ] Check credit card
+- [x] Check credit card
 
 ## Requirements
 
@@ -22,7 +22,7 @@ EasyValidationManager library allow to us that check phone number, credit card, 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate EasyValidationManager into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'EasyValidationManager', '~> 1.0.5'
+pod 'EasyValidationManager', '~> 2.0.0'
 ```
 
 ## License

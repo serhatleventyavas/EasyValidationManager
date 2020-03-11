@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "EasyValidationManager"
-  spec.version      = "1.0.5"
+  spec.version      = "2.0.0"
   spec.summary      = "EasyValidationManager is a small validation library."
   spec.description  = <<-DESC
   EasyValidationManager library allow to us that check phone number, credit card, email easily."
