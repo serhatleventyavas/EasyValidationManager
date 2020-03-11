@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045A9F5B24194CB700DDD1AC /* CreditCardValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A9F5A24194CB700DDD1AC /* CreditCardValidation.swift */; };
 		0499107C240AADA70082E521 /* EasyValidationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04991072240AADA70082E521 /* EasyValidationManager.framework */; };
 		04991081240AADA70082E521 /* EasyValidationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04991080240AADA70082E521 /* EasyValidationManagerTests.swift */; };
 		04991083240AADA70082E521 /* EasyValidationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04991075240AADA70082E521 /* EasyValidationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045A9F5A24194CB700DDD1AC /* CreditCardValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardValidation.swift; sourceTree = "<group>"; };
 		04991072240AADA70082E521 /* EasyValidationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyValidationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04991075240AADA70082E521 /* EasyValidationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyValidationManager.h; sourceTree = "<group>"; };
 		04991076240AADA70082E521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				049910A8240AAEFD0082E521 /* PhoneValidation.swift */,
+				045A9F5A24194CB700DDD1AC /* CreditCardValidation.swift */,
 			);
 			path = Validations;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049910A6240AAEE50082E521 /* Country.swift in Sources */,
+				045A9F5B24194CB700DDD1AC /* CreditCardValidation.swift in Sources */,
 				049910A9240AAEFD0082E521 /* PhoneValidation.swift in Sources */,
 				049910AE240AAF2B0082E521 /* JsonParser.swift in Sources */,
 			);

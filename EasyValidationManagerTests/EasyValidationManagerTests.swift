@@ -54,4 +54,19 @@ class EasyValidationManagerTests: XCTestCase {
         let result: Bool = PhoneValidation.validPhoneNumber(country: country, phoneNumber: "5551231233")
         XCTAssertEqual(result, true)
     }
+    
+    func test_givenCreditWrongCreditCard_returnFalse() {
+        let result: Bool = CreditCardValidation.validCreditCard(cardNumber: "4532030566401450")
+        XCTAssertEqual(result, false)
+    }
+    
+    func test_givenCreditCorrectCreditCard_returnTrue() {
+        let result: Bool = CreditCardValidation.validCreditCard(cardNumber: "4556737586899855")
+        XCTAssertEqual(result, true)
+    }
+    
+    func test_givenCreditAnotherCorrectCreditCard_returnTrue() {
+        let result: Bool = CreditCardValidation.validCreditCard(cardNumber: "4175001382805488")
+        XCTAssertEqual(result, true)
+    }
 }
